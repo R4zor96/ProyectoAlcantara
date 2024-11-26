@@ -53,6 +53,7 @@ INSERT INTO Tratamiento (idPaciente, Tipo, Descripcion, Estado, Fecha_Inicio, Fe
 (2, 'Blanqueamiento', 'Procedimiento para blanqueamiento dental.', 'Completado', '2024-11-05', '2024-11-20'),
 (3, 'Endodoncia', 'Tratamiento de conductos en molar derecho.', 'En progreso', '2024-11-10', '2024-12-01');
 
+
 ---------PATOLOGICOS--------------------------------------------------------------------------------------------------------------------
 
 -- Paciente 1
@@ -141,10 +142,10 @@ INSERT INTO Factura (idPaciente, Fecha_Emision, Monto_Total, Estado_Pago) VALUES
 (2, '2024-11-07', 1500.00, 'Pendiente'),
 (3, '2024-11-13', 3500.00, 'Pagada');
 
-INSERT INTO Cita (idTratamiento, idHistorial, idPaciente, Fecha, Hora, Metodo_Agenda, Estado) VALUES
-(1, 1, 1, '2024-11-02', '10:00:00', 'Online', 'Confirmada'),
-(2, 2, 2, '2024-11-06', '14:00:00', 'Presencial', 'Atendida'),
-(3, 3, 3, '2024-11-12', '16:30:00', 'Presencial', 'Programada');
+INSERT INTO Cita (idTratamiento, idHistorial, idPaciente, Motivo, Fecha, Hora, Metodo_Agenda, Estado) VALUES
+(1, 1, 1, 'Valoracion de dientes','2024-11-02', '10:00:00', 'Online', 'Confirmada'),
+(2, 2, 2, 'Revision de brackets', '2024-11-06', '14:00:00', 'Presencial', 'Atendida'),
+(3, 3, 3, 'Correccion de caries', '2024-11-12', '16:30:00', 'Presencial', 'Programada');
 
 INSERT INTO Recordatorio (idPaciente, idCita, Medio_Envio, Estado_Envio) VALUES
 (1, 1, 'Correo Electrónico', 'Enviado'),

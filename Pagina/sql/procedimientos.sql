@@ -41,14 +41,15 @@ CREATE PROCEDURE InsertarCita (
     IN p_idTratamiento INT,
     IN p_idHistorial INT,
     IN p_idPaciente INT,
+    IN p_Motivo VARCHAR(200),
     IN p_Fecha DATE,
     IN p_Hora TIME,
     IN p_Metodo_Agenda VARCHAR(50),
     IN p_Estado VARCHAR(50)
 )
 BEGIN
-    INSERT INTO Cita (idTratamiento, idHistorial, idPaciente, Fecha, Hora, Metodo_Agenda, Estado)
-    VALUES (p_idTratamiento, p_idHistorial, p_idPaciente, p_Fecha, p_Hora, p_Metodo_Agenda, p_Estado);
+    INSERT INTO Cita (idTratamiento, idHistorial, idPaciente, Motivo, Fecha, Hora, Metodo_Agenda, Estado)
+    VALUES (p_idTratamiento, p_idHistorial, p_idPaciente, p_Motivo, p_Fecha, p_Hora, p_Metodo_Agenda, p_Estado);
 END //
 
 DELIMITER ;
