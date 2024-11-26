@@ -161,42 +161,81 @@ $data = $tabla_paciente->GetPaciente($idPaciente);
         <div id="historiales" class="section active">
           <h2>Gestión de Historiales</h2>
 
+          <br> <!--datos personales del paciente -->
+
           <div class="row m-1">
             <div class="col-12 bg-white">
               <form>
-                <legend style="text-align: center;">Antecedentes Patologicos</legend>
+                <legend style="text-align: center;">Datos personales</legend>
                 <div class="row">
-                  <div class="form-group col-md-4">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
+                  <div class="form-group col">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
                   </div>
-                  <div class="form-group col-md-4">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <div class="form-group col">
+                    <label for="ap">Apellido paterno</label>
+                    <input type="text" class="form-control" id="ap">
                   </div>
-                  <div class="form-group col-md-4">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <div class="form-group col">
+                    <label for="am">Apellido materno</label>
+                    <input type="text" class="form-control" id="am">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-3">
+                    <label for="fn">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fn">
+                  </div>
+                  <div class="form-group col-3">
+                    <label for="edad">Edad</label>
+                    <input type="text" class="form-control" id="edad">
+                  </div>
+                  <div class="form-group col">
+                    <label for="mail">Correo electronico</label>
+                    <input type="email" class="form-control" id="mail">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col">
+                    <label for="calle">Calle</label>
+                    <input type="text" class="form-control" id="calle">
+                  </div>
+                  <div class="form-group col">
+                    <label for="col">Colonia</label>
+                    <input type="text" class="form-control" id="col">
+                  </div>
+                  <div class="form-group col">
+                    <label for="municipio">Municipio</label>
+                    <input type="text" class="form-control" id="municipio">
+                  </div>
+                  <div class="form-group col">
+                    <label for="estado">Estado</label>
+                    <input type="text" class="form-control" id="estado">
                   </div>
                 </div>
               </form>
             </div>
           </div>
 
+          <br> <!-- antecedentes Patologicos -->
+
           <div class="row m-1">
-            <div class="col-6">
+            <div class="col-6 bg-white">
               <form id="pacienteForm">
-                <legend>Antecedentes Patologicos</legend>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" readonly>
+                <legend style="text-align: center;">Antecedentes Patologicos</legend>
+                <div class="row">
+                  <div class="form-group col-3">
+                    <label for="diabetesNombre">Padecimiento</label>
+                    <input type="text" class="form-control" id="diabetesNombre">
+                  </div>
+                  <div class="form-group col-1">
+                    <label for="diabetes">Estado</label>
+                    <input type="checkbox" class="form-control" id="diabetes">
+                  </div>
 
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" readonly>
-
-                <label for="fechaN">Fecha de Nacimiento:</label>
-                <input type="date" id="fechaN" name="fechaN" readonly>
-
+                </div>
                 <!-- Otros campos que necesites -->
               </form>
             </div>
@@ -204,8 +243,8 @@ $data = $tabla_paciente->GetPaciente($idPaciente);
             <div class="col-6">
               <form id="pacienteForm">
                 <legend>Antecedentes no patologicos</legend>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" readonly>
+                <label for="estado">Estado</label>
+                <input type="checkbox" id="estado">
 
                 <label for="correo">Correo Electrónico:</label>
                 <input type="email" id="correo" name="correo" readonly>
@@ -213,16 +252,16 @@ $data = $tabla_paciente->GetPaciente($idPaciente);
                 <label for="fechaN">Fecha de Nacimiento:</label>
                 <input type="date" id="fechaN" name="fechaN" readonly>
 
+                <div class="row m-1">
+                  <div class="col-12">
+                    Citas previas
+                  </div>
+                </div>
                 <!-- Otros campos que necesites -->
               </form>
             </div>
           </div>
 
-          <div class="row m-1">
-            <div class="col-12">
-              Citas previas
-            </div>
-          </div>
 
         </div>
 
