@@ -1,7 +1,6 @@
 <?php
 require_once("./Conexion/Tabla_paciente.php");
 $idPaciente = 1;
-
 //Instancia modelo
 $tabla_paciente = new Tabla_paciente();
 $data = $tabla_paciente->GetPaciente($idPaciente);
